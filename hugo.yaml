@@ -45,7 +45,7 @@ params:
   # --- 核心修改 2：网页左上角导航栏 (Logo + 名字) ---
   label:
     text: "L-Rocket"                # 左上角显示的文字
-    icon: "/images/avatar_standard_512x512.png" # 左上角显示的小图标 (复用你的大头像即可)
+    # icon: "/images/avatar_standard_512x512.png" # 左上角显示的小图标 (复用你的大头像即可)
     iconHeight: 30                  # 图标高度 (建议30-40)
 
   # --- 核心修改 3：项目列表显示封面图 ---
