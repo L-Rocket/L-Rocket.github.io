@@ -1,0 +1,38 @@
+# Hugo build artifacts
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Hugo build lock
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+
+# Node modules (if using npm for dependencies)
+node_modules/
+package-lock.json
+
+# Python cache (for your converter scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

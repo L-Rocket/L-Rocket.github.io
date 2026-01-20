@@ -1,0 +1,80 @@
+baseURL: "https://L-Rocket.github.io/"
+languageCode: "en-us"
+title: "Weihao's Portfolio" # 浏览器标签页显示的文字
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableEmoji: true
+
+# 开启搜索功能输出
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 菜单栏配置
+menu:
+  main:
+    - identifier: posts
+      name: "Blog"
+      url: "/posts/"
+      weight: 10
+    - identifier: projects
+      name: "Projects"
+      url: "/projects/"
+      weight: 20
+    - identifier: github
+      name: "GitHub"
+      url: "https://github.com/L-Rocket"
+      weight: 30
+
+# PaperMod 特有参数
+params:
+  defaultTheme: auto
+  isShowToc: true
+  
+  # --- 核心修改 1：浏览器标签页小图标 ---
+  assets:
+    # favicon: "/favicon.png"         # 32x32 像素
+    # apple_touch_icon: "/apple-touch-icon.png" # 180x180 像素 (iPhone主屏图标)
+    favicon: "/images/favicon_circle.png"
+    favicon16x16: "/images/favicon_circle.png"
+    favicon32x32: "/images/favicon_circle.png"
+    apple_touch_icon: "/images/favicon_circle.png"
+  # --- 核心修改 2：网页左上角导航栏 (Logo + 名字) ---
+  label:
+    text: "L-Rocket"                # 左上角显示的文字
+    icon: "/images/avatar_standard_512x512.png" # 左上角显示的小图标 (复用你的大头像即可)
+    iconHeight: 30                  # 图标高度 (建议30-40)
+
+  # --- 核心修改 3：项目列表显示封面图 ---
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+    responsiveImages: true
+
+  # 首页个人简介
+  profileMode:
+    enabled: true
+    title: "Hi, I'm weihao"
+    subtitle: "CS Student @ Duke ECE"
+    imageUrl: "/images/avatar_standard_512x512.png"
+    imageTitle: "My Avatar"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: My Projects
+        url: "/projects"
+      - name: Email Me
+        url: "mailto:weihao.li@duke.edu"
+
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/L-Rocket"
+    - name: linkedin
+      url: "https://linkedin.com/in/weihao"
+    - name: email  # 全小写，确保图标显示
+      url: "mailto:weihao.li@duke.edu"
