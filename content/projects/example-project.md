@@ -1,6 +1,6 @@
 ---
 date: '2026-02-13T10:00:00-05:00'
-draft: true
+draft: false
 title: 'Example Project'
 description: 'One-paragraph summary of the project.'
 tags: ['project', 'example']
