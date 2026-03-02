@@ -86,6 +86,6 @@ params:
     - name: github
       url: "https://github.com/L-Rocket"
     - name: linkedin
-      url: "https://linkedin.com/in/weihao"
+      url: "https://www.linkedin.com/in/weihao-li-4569043a7/"
     - name: email  # 全小写，确保图标显示
       url: "mailto:weihao.li@duke.edu"
