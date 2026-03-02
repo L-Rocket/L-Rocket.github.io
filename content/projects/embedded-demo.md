@@ -1,6 +1,6 @@
 ---
 date: '2026-02-14T10:00:00-05:00'
-draft: false
+draft: true
 title: 'Interactive Demo'
 description: 'Live embedded demo of my project.'
 tags: ['project', 'demo']

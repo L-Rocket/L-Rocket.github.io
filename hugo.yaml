@@ -6,34 +6,52 @@ theme: "PaperMod"
 enableInlineShortcodes: true
 enableEmoji: true
 
-# 开启搜索功能输出
+buildFuture: true
+
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+  section:
+    - HTML
+    - RSS
+
+# 默认内容状态
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+# 忽略文件
+ignoreFiles:
+  - '(^|/)node_modules(/|$)'
+  - '(^|/)\\.git(/|$)'
 
 # 菜单栏配置
 menu:
   main:
-    - identifier: posts
-      name: "Blog"
-      url: "/posts/"
-      weight: 10
     - identifier: projects
       name: "Projects"
       url: "/projects/"
-      weight: 20
+      weight: 10
     - identifier: github
       name: "GitHub"
       url: "https://github.com/L-Rocket"
-      weight: 30
+      weight: 20
 
 # PaperMod 特有参数
 params:
   defaultTheme: auto
   isShowToc: true
-  
+  # 首页显示所有页面
+  homeInfoParams:
+    title: "Hi, I'm weihao"
+    content: "CS Student @ Duke ECE"
+  # 首页显示封面图
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+    responsiveImages: true
   # --- 核心修改 1：浏览器标签页小图标 ---
   assets:
     # favicon: "/favicon.png"         # 32x32 像素
@@ -47,13 +65,6 @@ params:
     text: "L-Rocket"                # 左上角显示的文字
     # icon: "/images/avatar_standard_512x512.png" # 左上角显示的小图标 (复用你的大头像即可)
     iconHeight: 30                  # 图标高度 (建议30-40)
-
-  # --- 核心修改 3：项目列表显示封面图 ---
-  cover:
-    hidden: false
-    hiddenInList: false
-    hiddenInSingle: false
-    responsiveImages: true
 
   # 首页个人简介
   profileMode:
