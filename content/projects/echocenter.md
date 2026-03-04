@@ -11,19 +11,7 @@ lastmod: '2026-03-04T10:40:00+08:00'
 
 ## Overview
 
-EchoCenter is a professional, modular intelligent agent management hub. It provides a centralized platform for agent registration, real-time bidirectional messaging via WebSocket, and intelligent command execution coordinated by the core **Butler** agent.
-
-## Latest Update (2026-03-02)
-
-The backend quality baseline was raised with a focused testing pass:
-
-- Added unit tests for `auth`, `config`, and `repository` modules (`backend/internal/*_test.go`)
-- Hardened SQLite unique-constraint detection in repository logic (case-insensitive matching of `unique constraint failed`)
-- Added bilingual contribution guides:
-  - `docs/development/contributing.md`
-  - `docs/zh/development/contributing.md`
-
-This update mainly improves confidence for ongoing backend refactors and contributor onboarding.
+EchoCenter is a professional, modular intelligent agent management hub. It provides a centralized platform for agent registration, real-time bidirectional messaging via WebSocket, and intelligent command execution coordinated by the core **Butler** agent. The backend is built with testable modules (auth/config/repository), stricter repository error handling, and bilingual contributor documentation for smoother collaboration.
 
 ## Key Features
 

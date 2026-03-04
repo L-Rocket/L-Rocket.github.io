@@ -11,14 +11,7 @@ lastmod: '2026-03-04T10:40:00+08:00'
 
 ## Overview
 
-nanoCache is a sharded, thread-safe in-memory key-value store. This project serves as a **comparative study between Modern C++ (C++17) and Go**, implementing the same architectural design to explore the differences in concurrency models, memory management, and locking strategies.
-
-## Latest Update (2026-03-04)
-
-- Added CI workflow to run Go/C++ test and benchmark smoke jobs on every push/PR
-- Aligned benchmark workload (same concurrency level and precomputed keys in both implementations)
-- Added one-command comparison script: `./scripts/compare_cpp_go_perf.sh`
-- Published bilingual benchmark documentation (`README.md` + `README.zh-CN.md`)
+nanoCache is a sharded, thread-safe in-memory key-value store. This project serves as a **comparative study between Modern C++ (C++17) and Go**, implementing the same architectural design to explore the differences in concurrency models, memory management, and locking strategies. It ships with aligned benchmark workflows, CI smoke checks for both language implementations, and bilingual documentation for reproducible C++/Go comparisons.
 
 ## Architecture
 
