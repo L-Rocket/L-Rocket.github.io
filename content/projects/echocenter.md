@@ -1,6 +1,6 @@
 ---
-date: '2026-03-01T16:00:00+08:00'
-publishDate: '2026-03-01T16:00:00+08:00'
+date: '2026-03-03T16:00:00+08:00'
+publishDate: '2026-03-03T16:00:00+08:00'
 draft: false
 title: 'EchoCenter'
 description: 'A professional, modular intelligent agent management hub with real-time messaging and AI coordination.'
