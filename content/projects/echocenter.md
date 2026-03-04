@@ -1,16 +1,17 @@
 ---
-date: '2026-03-01T16:00:00+08:00'
-publishDate: '2026-03-01T16:00:00+08:00'
+date: '2026-03-03T16:00:00+08:00'
+publishDate: '2026-03-03T16:00:00+08:00'
 draft: false
 title: 'EchoCenter'
 description: 'A professional, modular intelligent agent management hub with real-time messaging and AI coordination.'
 tags: ['project', 'go', 'react', 'ai', 'websocket']
+lastmod: '2026-03-04T10:40:00+08:00'
 
 ---
 
 ## Overview
 
-EchoCenter is a professional, modular intelligent agent management hub. It provides a centralized platform for agent registration, real-time bidirectional messaging via WebSocket, and intelligent command execution coordinated by the core **Butler** agent.
+EchoCenter is a professional, modular intelligent agent management hub. It provides a centralized platform for agent registration, real-time bidirectional messaging via WebSocket, and intelligent command execution coordinated by the core **Butler** agent. The backend is built with testable modules (auth/config/repository), stricter repository error handling, and bilingual contributor documentation for smoother collaboration.
 
 ## Key Features
 

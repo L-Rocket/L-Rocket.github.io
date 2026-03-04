@@ -5,11 +5,12 @@ draft: false
 title: 'BlockVector'
 description: 'A high-performance, header-only C++17 container designed to solve specific limitations of std::vector.'
 tags: ['project', 'c++', 'performance', 'container']
+lastmod: '2026-03-04T10:40:00+08:00'
 ---
 
 ## Overview
 
-BlockVector is a high-performance, header-only C++17 container designed to solve specific limitations of `std::vector`. It addresses common issues like pointer invalidation, expensive reallocation, and memory peaks through its innovative chunked storage architecture.
+BlockVector is a high-performance, header-only C++17 container designed to solve specific limitations of `std::vector`. It addresses common issues like pointer invalidation, expensive reallocation, and memory peaks through its innovative chunked storage architecture. The project documentation includes local benchmark comparisons and dedicated pointer-stability tests to make tradeoffs explicit for real workloads.
 
 ## Why BlockVector?
 

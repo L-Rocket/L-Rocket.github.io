@@ -5,12 +5,13 @@ draft: false
 title: 'nanoCache'
 description: 'A high-performance in-memory key-value store implemented in both C++17 and Go for comparative study.'
 tags: ['project', 'c++', 'go', 'performance', 'cache']
+lastmod: '2026-03-04T10:40:00+08:00'
 
 ---
 
 ## Overview
 
-nanoCache is a sharded, thread-safe in-memory key-value store. This project serves as a **comparative study between Modern C++ (C++17) and Go**, implementing the same architectural design to explore the differences in concurrency models, memory management, and locking strategies.
+nanoCache is a sharded, thread-safe in-memory key-value store. This project serves as a **comparative study between Modern C++ (C++17) and Go**, implementing the same architectural design to explore the differences in concurrency models, memory management, and locking strategies. It ships with aligned benchmark workflows, CI smoke checks for both language implementations, and bilingual documentation for reproducible C++/Go comparisons.
 
 ## Architecture
 
@@ -23,7 +24,7 @@ To minimize lock contention in high-concurrency scenarios, nanoCache uses a **Sh
 ## Project Structure
 
 - **[`cpp-impl/`](./cpp-impl)**: The baseline implementation using C++17. Focuses on manual memory management using `std::shared_ptr` and `std::shared_mutex`.
-- **[`go-impl/`](./go-impl)**: The target implementation using Go. Focuses on Goroutines, Channels, and the Go runtime scheduler.
+- **`go-iml/`**: The Go implementation using goroutines and the Go runtime scheduler.
 
 ## Getting Started
 
@@ -44,22 +45,33 @@ make
 Requirements: Go >= 1.20.
 
 ```bash
-cd go-impl
+cd go-iml
 go mod tidy
 go run cmd/server/main.go
 ```
 
-## Performance Benchmark
+## Performance Benchmark (Local Baseline)
 
-*Creating a baseline comparison between the two implementations.*
+Benchmark baseline from the latest local run on 2026-03-04 (Apple M4, macOS/darwin arm64).
 
-| Metric | C++ Implementation | Go Implementation |
-| :--- | :--- | :--- |
-| **Throughput (OPS)** | *TBD* | *TBD* |
-| **Memory Footprint** | *TBD* | *TBD* |
-| **Lock Contention** | *High/Low* | *High/Low* |
+Method:
 
-> *Benchmarks will be run on [Your CPU Specs] with 100 concurrent workers and 1M keys.*
+- Aligned concurrency: `GOMAXPROCS=10` (Go) and `--threads 10` (C++)
+- Aligned hot path: benchmark keys are precomputed before timing in both implementations
+- Go command: `go test ./go-iml/cache -run '^$' -bench 'BenchmarkCache(Set|Get|ConcurrentSetGet)$' -benchmem -count=3`
+- C++ command: `./cpp-impl/build/benchmark_sharded_cache --ops 300000 --threads 10` (3 runs averaged)
+
+| Scenario | C++ (ops/s) | Go (ops/s) | Faster |
+| :--- | :--- | :--- | :--- |
+| Set | `10,195,253` | `3,686,323` | `C++ ~2.74x` |
+| Get | `16,019,100` | `6,123,709` | `C++ ~2.62x` |
+| Concurrent Set+Get | `27,554,267` | `5,154,838` | `C++ ~5.35x` |
+
+Run local comparison from repository root:
+
+```bash
+./scripts/compare_cpp_go_perf.sh
+```
 
 ## Key Learnings (The Migration Journey)
 
